@@ -2,27 +2,43 @@
 #include "BubbleSort.h"
 #include <iostream>
 #include "QuickSort.h"
+#include "RecursiveBinarySearch.h"
 using namespace std;
 
 
 int main(){
     vector<int> vect;
-    vect.push_back(5);
-    vect.push_back(1);
-    vect.push_back(-4);
-    vect.push_back(2);
-    vect.push_back(19);
-    BubbleSort halpert;
-    QuickSort beesly;
-    //vector<int> sorted = halpert.sort(vect);
-    vector<int> sorted2 = beesly.sort(vect);
-    
+
+    QuickSort jim;
     /*for (int i=0; i<vect.size(); i++) {
         cout<<sorted[i]<<" ";
     }
-    cout<<endl;*/
+    cout<<endl;
     for (int i=0; i<vect.size(); i++) {
         cout<<sorted2[i]<<" ";
+    }
+    cout<<endl;
+    
+    RecursiveBinarySearch jon(vect, -4, 0, 6)
+    cout<<jon.search(sorted2, 23)<<endl;*/
+    RecursiveBinarySearch jon(vect, -4, 0, 6);
+    while(!cin.fail()) {
+            int input;
+            cin >> input;
+            vect.push_back(input);
+        }
+        vect.pop_back();
+    
+    vector<int> sorted = jim.sort(vect);
+    string boole;
+    if (jon.search(sorted,1)==1) {
+        boole = "true";
+    }else{
+        boole = "false";
+    }
+    cout<<boole;
+    for (int i=0; i<sorted.size(); i++) {
+        cout<<" "<<sorted[i];
     }
     cout<<endl;
 }
