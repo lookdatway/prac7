@@ -19,12 +19,50 @@ vector<int> QuickSort::sort(vector<int> list){
     for (int i=0; i<list.size(); i++) {
         if (list[i]>partition) {
             high.push_back(list[i]);
-        }else{
-            low.push_back(list[i]);
+            //cout<<"high "<<list[i]<<endl;
+            continue;
         }
+        if (list[i]<partition) {
+            low.push_back(list[i]);
+            //cout<<"low "<<list[i]<<endl;
+            continue;
+
+        }
+        if (list[i]==partition&&partition==*min_element(list.begin(),list.end())) {
+            low.push_back(list[i]);
+            //cout<<"low "<<list[i]<<endl;
+            continue;
+
+        }
+        if (list[i]==partition&&partition==*max_element(list.begin(),list.end())) {
+            high.push_back(list[i]);
+            //cout<<"high "<<list[i]<<endl;
+            continue;
+
+        }
+        if (list[i]==partition&&i==2) {
+            high.push_back(list[i]);
+            //cout<<"high "<<list[i]<<endl;
+            continue;
+
+        }
+        if (list[i]==partition&&i==0) {
+            low.push_back(list[i]);
+            //cout<<"low "<<list[i]<<endl;
+            continue;
+        }
+
+        
     }
     vector<int> a;
     vector<int> b;
+    /*for (int k; low.size(); k++) {
+        cout<<low[k]<<endl;
+    }
+   
+    for (int j; j<high.size(); j++) {
+        cout<<high[j]<<endl;
+    }*/
     a=sort(low);
     b=sort(high);
     a.insert(a.end(),b.begin(), b.end());
