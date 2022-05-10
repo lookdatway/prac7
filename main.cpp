@@ -19,11 +19,11 @@ int main(){
     BubbleSort halpert;*/
     QuickSort beesly;
     RecursiveBinarySearch jon(vect, -4, 0, 6);
-    int input;
-    cin>>input;
-    while (cin) {
-        vect.push_back(input);
+
+    while (!cin.fail()) {
+        int input;
         cin>>input;
+        vect.push_back(input);
     }
     vect.pop_back();
     
@@ -40,7 +40,7 @@ int main(){
         cout<<sorted[i]<<" ";
     }
     cout<<endl;*/
-    for (int i=0; i<vect.size(); i++) {
+    for (int i=0; i<sorted2.size(); i++) {
         cout<<sorted2[i]<<" ";
     }
     cout<<endl;

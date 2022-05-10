@@ -4,8 +4,7 @@ using namespace std;
 
 
 RecursiveBinarySearch::RecursiveBinarySearch(vector<int> sorted, int find, int min,  int max){
-    min=max;
-    sorted[0]=find;
+
 }
 bool RecursiveBinarySearch::search(vector<int> toSearch, int toFind){
     
