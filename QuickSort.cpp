@@ -1,5 +1,7 @@
 
 #include <iostream>
+#include <algorithm>
+#include <cmath>
 #include "QuickSort.h"
 using namespace std;
 
