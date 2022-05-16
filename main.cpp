@@ -18,7 +18,7 @@ int main(){
     vect.push_back(2014);
     BubbleSort halpert;*/
     QuickSort beesly;
-    RecursiveBinarySearch jon(vect, -4, 0, 6);
+    RecursiveBinarySearch jon;
 
     while (!cin.fail()) {
         int input;

@@ -3,11 +3,8 @@
 using namespace std;
 
 
-RecursiveBinarySearch::RecursiveBinarySearch(vector<int> sorted, int find, int min,  int max){
 
-}
 bool RecursiveBinarySearch::search(vector<int> toSearch, int toFind){
-    
     int mid = toSearch.size()/2;
     
     if (toSearch[mid]==toFind){
